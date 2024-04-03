@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class sumofstringnums {
     // Function to find sum of all possible substrings of the given string.
-    public static long sumSubstrings(String s) {
+    public static long sumSubstring(String s) {
         long sum = 0;
         long mul = 1;
         long mod = 1000000007;
@@ -21,7 +21,7 @@ public class sumofstringnums {
         String s = scanner.next();
 
         // Calculate the sum of all possible substrings of the given string
-        long result = sumSubstrings(s);
+        long result = sumSubstring(s);
 
         // Print the result
         System.out.println("Sum of all possible substrings of the given string: " + result);
