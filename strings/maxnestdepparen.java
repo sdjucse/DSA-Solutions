@@ -1,6 +1,6 @@
 public class maxnestdepparent{
     public int maxDepth(String s){
-        char[] chararr= new s.toCharArray();
+        char[] chararr= s.toCharArray();
         int maxd=0;
         int stklen=0;
         foe(char c : chararr){
