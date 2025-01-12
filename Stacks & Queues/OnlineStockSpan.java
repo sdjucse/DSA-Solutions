@@ -3,6 +3,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 class StockSpanner {
     private List<Integer> prices; // Stores the daily prices
@@ -59,9 +60,9 @@ class StockSpanner {
 
 //2. Optimized(using stack)
 
-class StockSpanner {
+class OnlineStockSpan {
     private Stack<int[]>st;
-    public StockSpanner() {
+    public OnlineStockSpan() {
             st= new Stack<>();
     }
     
