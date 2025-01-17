@@ -1,5 +1,9 @@
 package Arrays;
 
+/**
+ * This class provides a solution to find the number of ways to split an array
+ * such that the sum of the left subarray is greater than or equal to the sum of the right subarray.
+ */
 class Solution {
 
     /**
@@ -10,33 +14,30 @@ class Solution {
      * @return The number of valid splits.
      */
     public int waysToSplitArray(int[] nums) {
-        int n = nums.length; // Length of the array
+        // Initialize variables
+        long sum = 0;         // The total sum of all elements in the array
+        long rightSum = 0;    // The sum of elements in the right subarray
+        long leftSum = 0;     // The sum of elements in the left subarray
+        int cnt = 0;          // Counter for the number of valid splits
+        int n = nums.length;  // Length of the array
 
         // Calculate the total sum of the array elements
-        long totalSum = 0;
-        for (int num : nums) {
-            totalSum += num;
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
         }
-
-        // Initialize variables for the left subarray sum and split count
-        long leftSum = 0;
-        int splitCount = 0;
 
         // Iterate through the array to calculate valid split points
         for (int i = 0; i < n - 1; i++) {
-            // Add the current element to the left subarray sum
-            leftSum += nums[i];
+            leftSum += nums[i];        // Update the left subarray sum
+            rightSum = sum - leftSum;  // Calculate the right subarray sum
 
-            // Calculate the right subarray sum
-            long rightSum = totalSum - leftSum;
-
-            // If the left sum is greater than or equal to the right sum, increment the split count
+            // Check if the left sum is greater than or equal to the right sum
             if (leftSum >= rightSum) {
-                splitCount++;
+                cnt++; // Increment the count of valid splits
             }
         }
 
-        // Return the total number of valid splits
-        return splitCount;
+        // Return the total count of valid splits
+        return cnt;
     }
 }
