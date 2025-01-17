@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Solution{
     static ArrayList<Integer> recamanSequence(int n){
         int prev = 0;
