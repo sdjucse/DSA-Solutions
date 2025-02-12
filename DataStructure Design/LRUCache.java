@@ -3,6 +3,10 @@ import java.util.*;
 
 
 public class LRUCache{
+    /*
+     * T.C:-O(1)
+     * S.C:-O(N)
+     */
     private LinkedHashMap<Integer,Integer>map= new LinkedHashMap<>();
     private int capacity;
 
