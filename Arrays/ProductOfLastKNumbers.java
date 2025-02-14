@@ -1,5 +1,8 @@
 import java.util.*;
 public class ProductOfLastKNumbers{
+    //Approach-1 (Brute Force)
+//T.C : add() - O(1), getProduct() - O(k)
+//S.C : O(n) for the stream
     private  List<Integer>arr;
     private int n;
     public ProductOfLastKNumbers(){
