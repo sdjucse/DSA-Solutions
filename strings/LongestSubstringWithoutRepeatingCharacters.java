@@ -29,11 +29,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
    return maxans;
 }
 /*
- * * Approach-2: Using HashMap (Sliding Window) [O(N)]
- * * Time Complexity: O(N) where N is the length of the string.    
+ * * Approach-2: Using Sliding Window (Two Pointer) [O(N)]
+ * * * Time Complexity: O(N) where N is the length of the string.
  * * * Space Complexity: O(n) where M is the size of the character set.
  */
-public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {
     HashMap<Character, Integer> mpp = new HashMap<>();
 
     int left = 0, right = 0;
