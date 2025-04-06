@@ -32,7 +32,7 @@ public class LongestNiceSubString {
     }
     /*
      * Optimized Approach Using HashSet to check if a character and its opposite case exist.
-     * T.C : O(n) S.C : O(n)
+     * T.C : O(n^2) S.C : O(n)
      */
     public String longestNiceSubstring(String s) {
         if (s.length() < 2) return "";
