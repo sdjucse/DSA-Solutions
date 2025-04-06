@@ -3,7 +3,6 @@ package Arrays;
 public class MaximumSubArrayAverage {
     public double findMaxAverage(int[] nums, int k) {
         int  n=nums.length;
-        double max_avg=Integer.MIN_VALUE;
         int l=0;
         int r=k;
         int sum=0;
@@ -18,6 +17,6 @@ public class MaximumSubArrayAverage {
             r++;
             max_sum=Math.max(sum,max_sum);
         }
-        return (double)max_sum/k;
+        return (double)max_sum/k;   
     }
 }
