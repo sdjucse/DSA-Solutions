@@ -76,4 +76,8 @@ public class QueueUsingArray {
     public boolean isFull() {
         return size == capacity;
     }
+    /*
+     * * Time Complexity: O(1) for all operations.
+     * * Space Complexity: O(N) where N is the size of the queue.
+     */
 }
